@@ -448,7 +448,7 @@ body {
   line-height: 1.8;
 }
 
-.faq-item.open .faq-a { max-height: 300px; padding: 0 22px 20px; }
+.faq-item.open .faq-a { max-height: 500px; padding: 0 22px 20px; }
 
 .back-to-top {
   position: fixed;
@@ -523,6 +523,43 @@ body {
   .dia-row { flex-direction: column; align-items: center; }
   .nav-inner a { padding: 10px 12px; font-size: 13px; }
 }
+
+/* New section styles */
+.data-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 16px; background: var(--card-bg); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); }
+.data-table th { background: var(--mid-blue); color: #fff; padding: 14px 16px; text-align: left; font-size: 15px; white-space: nowrap; }
+.data-table td { padding: 12px 16px; border-bottom: 1px solid #eee; }
+.data-table tr:last-child td { border-bottom: none; }
+.data-table tr:hover td { background: #f7f8fc; }
+.data-table .highlight { background: #fff5f5; }
+.data-table .best { color: var(--accent-red); font-weight: 700; }
+.stars { color: #f39c12; letter-spacing: 2px; }
+.badge { display: inline-block; padding: 3px 10px; border-radius: 12px; font-size: 13px; font-weight: 700; }
+.badge-red { background: #fce4e4; color: #c0392b; }
+.badge-green { background: #e8f8f0; color: #1a7a42; }
+.badge-blue { background: #e8f0fe; color: var(--mid-blue); }
+.badge-yellow { background: #fff8e1; color: #7d6608; }
+.link-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+.link-card { background: var(--card-bg); border-radius: 12px; padding: 18px 22px; box-shadow: var(--shadow); transition: transform 0.2s, box-shadow 0.2s; text-decoration: none; color: var(--text); display: block; border-left: 4px solid var(--mid-blue); }
+.link-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+.link-card h4 { color: var(--navy); font-size: 16px; margin-bottom: 4px; }
+.link-card p { font-size: 14px; color: var(--text-light); }
+.link-card .url { font-size: 13px; color: var(--mid-blue); word-break: break-all; }
+.tuning-step { background: var(--card-bg); border-radius: var(--radius); padding: 22px 26px; margin-bottom: 16px; box-shadow: var(--shadow); }
+.tuning-step h4 { color: var(--navy); font-size: 18px; margin-bottom: 8px; }
+.tuning-step .setting { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px dashed #eee; }
+.tuning-step .setting:last-child { border-bottom: none; }
+.tuning-step .setting-name { font-weight: 600; }
+.tuning-step .setting-value { color: var(--accent-red); font-weight: 700; font-size: 18px; }
+.room-tip { display: flex; gap: 16px; background: var(--card-bg); border-radius: 12px; padding: 20px 24px; margin-bottom: 14px; box-shadow: var(--shadow); align-items: flex-start; }
+.room-tip .room-icon { font-size: 32px; flex-shrink: 0; }
+.room-tip h4 { color: var(--navy); font-size: 17px; margin-bottom: 4px; }
+.room-tip p { font-size: 16px; color: #666; }
+.mode-card { background: var(--card-bg); border-radius: var(--radius); padding: 28px; margin-bottom: 20px; box-shadow: var(--shadow); }
+.mode-card h4 { font-size: 20px; margin-bottom: 10px; }
+.mode-card .mode-tag { display: inline-block; padding: 4px 14px; border-radius: 20px; font-size: 14px; font-weight: 700; margin-bottom: 12px; }
+.discount { color: var(--accent-green); font-weight: 700; }
+@media (max-width: 600px) { .data-table { font-size: 14px; } .data-table th, .data-table td { padding: 10px 8px; } .link-grid { grid-template-columns: 1fr; } }
+@media print { .data-table { box-shadow: none; border: 1px solid #ddd; } }
 </style>
 </head>
 <body>
@@ -537,6 +574,16 @@ body {
     <a href="#upgrade">進階升級</a>
     <a href="#caution">注意事項</a>
     <a href="#faq">常見問題</a>
+    <a href="#karaoke-compare">點歌機比較</a>
+    <a href="#secondhand">二手攻略</a>
+    <a href="#budget">預算表</a>
+    <a href="#amp-recommend">擴大機推薦</a>
+    <a href="#mic">麥克風選購</a>
+    <a href="#songlib">歌庫更新</a>
+    <a href="#tuning">爆炸感調校</a>
+    <a href="#room">房間聲學</a>
+    <a href="#dual-mode">雙模式</a>
+    <a href="#links">搜尋連結</a>
   </div>
 </nav>
 
@@ -887,6 +934,411 @@ body {
       <div class="faq-a">
         <p><strong>可以！</strong>只要切換電視的訊號源就好了（遙控器上的「輸入」或「Source」按鈕）。點歌機歌庫沒有的歌，就切到 YouTube 去搜。兩邊都可以唱！</p>
       </div>
+    </div>
+  </section>
+
+  <!-- Section 9 -->
+  <section class="section" id="karaoke-compare">
+    <h2 class="section-title"><span class="num">9</span> 點歌機品牌比較表</h2>
+    <div style="overflow-x:auto;">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>品牌</th>
+            <th>推薦機型</th>
+            <th>全新價格</th>
+            <th>台語老歌</th>
+            <th>伴奏音質</th>
+            <th>耐用度</th>
+            <th>長輩友善</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight">
+            <td><strong>金嗓</strong></td>
+            <td>CPX-900 R3</td>
+            <td>$38,500</td>
+            <td><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br><small>原聲原影多</small></td>
+            <td><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br><small>Roland 晶片</small></td>
+            <td><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br><small>口碑第一</small></td>
+            <td><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></td>
+          </tr>
+          <tr>
+            <td><strong>音圓</strong></td>
+            <td>N2-150</td>
+            <td>$40,900</td>
+            <td><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br><small>歌庫最大 2萬+</small></td>
+            <td><span class="stars">&#9733;&#9733;&#9733;&#9733;</span><br><small>8MB 取樣ROM</small></td>
+            <td><span class="stars">&#9733;&#9733;&#9733;&#9733;</span></td>
+            <td><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></td>
+          </tr>
+          <tr>
+            <td><strong>美華</strong></td>
+            <td>HD-889 Lite</td>
+            <td>$39,900</td>
+            <td><span class="stars">&#9733;&#9733;&#9733;&#9733;</span><br><small>原聲原影最多</small></td>
+            <td><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><br><small>YAMAHA+Dream</small></td>
+            <td><span class="stars">&#9733;&#9733;&#9733;&#9733;</span></td>
+            <td><span class="stars">&#9733;&#9733;&#9733;&#9733;</span></td>
+          </tr>
+          <tr>
+            <td><strong>點將家</strong></td>
+            <td>DCC-899</td>
+            <td>~$35,000</td>
+            <td><span class="stars">&#9733;&#9733;&#9733;</span></td>
+            <td><span class="stars">&#9733;&#9733;&#9733;</span></td>
+            <td><span class="stars">&#9733;&#9733;&#9733;</span></td>
+            <td><span class="stars">&#9733;&#9733;&#9733;</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip" style="background:#fff8e1; border-radius:8px; padding:14px 18px; border-left:4px solid var(--accent-yellow); margin-top:16px; color:#7d6608;">
+      <strong>推薦：</strong>爸爸主要唱台語老歌 → <strong>金嗓 CPX-900</strong> 系列（Roland 晶片音質最細膩、台語原聲原影最多、耐用度口碑第一）
+    </div>
+  </section>
+
+  <!-- Section 10 -->
+  <section class="section" id="secondhand">
+    <h2 class="section-title"><span class="num">10</span> 二手購買注意事項</h2>
+    <div style="overflow-x:auto;">
+      <table class="data-table">
+        <thead><tr><th>出廠年份</th><th>建議</th><th>原因</th></tr></thead>
+        <tbody>
+          <tr><td><strong>3 年內</strong></td><td><span class="badge badge-green">最推薦</span></td><td>機況穩定，硬碟健康，可能仍有歌曲更新</td></tr>
+          <tr><td><strong>3~5 年</strong></td><td><span class="badge badge-yellow">可考慮</span></td><td>需特別檢查硬碟健康狀態，確認更新是否有效</td></tr>
+          <tr><td><strong>5~7 年</strong></td><td><span class="badge badge-red">需謹慎</span></td><td>硬碟風險高，散熱和電源零件可能老化</td></tr>
+          <tr><td><strong>7 年以上</strong></td><td><span class="badge badge-red">不建議</span></td><td>風險太高，維修成本可能不划算</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 style="margin-top:24px; margin-bottom:14px; color:var(--navy);">購買前必查項目</h3>
+    <ul class="warning-list">
+      <li data-icon="&#128190;">硬碟健康狀態 — 機械硬碟 3~5 年後故障率上升，這是最常壞的零件</li>
+      <li data-icon="&#9729;&#65039;">雲端更新是否有效 — 確認歌庫更新服務還在有效期限內</li>
+      <li data-icon="&#128250;">影音輸出介面 — 確認有 <strong>HDMI 輸出</strong>（老舊機型可能只有 AV 端子）</li>
+      <li data-icon="&#128269;">到實體店面試機 — 選擇可試聽試唱、附短期保固的商家</li>
+      <li data-icon="&#128220;">版權合法性 — 確認歌曲有原廠合法版權證明</li>
+    </ul>
+  </section>
+
+  <!-- Section 11 -->
+  <section class="section" id="budget">
+    <h2 class="section-title"><span class="num">11</span> 完整預算表</h2>
+    <h3 style="color:var(--accent-green); margin-bottom:14px;">&#9989; 已有設備（不需再買）</h3>
+    <div style="overflow-x:auto;">
+      <table class="data-table">
+        <thead><tr><th>設備</th><th>角色</th><th>估計價值</th></tr></thead>
+        <tbody>
+          <tr><td>FIESTA KARASTAR</td><td>混音 + 迴音 + 升降KEY</td><td>~$10,000</td></tr>
+          <tr><td>Klipsch RP-600M（一對）</td><td>主喇叭</td><td>~$12,000</td></tr>
+          <tr><td>Klipsch R-10SWi</td><td>重低音</td><td>~$8,000</td></tr>
+          <tr><td>Yamaha 擴大機</td><td>驅動喇叭</td><td>~$8,000</td></tr>
+          <tr style="background:#e8f8f0; font-weight:700;"><td colspan="2">現有設備總價值</td><td class="best" style="color:var(--accent-green);">~$38,000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 style="color:var(--accent-red); margin-top:24px; margin-bottom:14px;">&#128722; 還需要購買</h3>
+    <div style="overflow-x:auto;">
+      <table class="data-table">
+        <thead><tr><th>項目</th><th>推薦型號</th><th>預估花費</th></tr></thead>
+        <tbody>
+          <tr class="highlight"><td><strong>點歌機</strong></td><td>金嗓/音圓（二手 3 年內）</td><td>$8,000 ~ $15,000</td></tr>
+          <tr><td>UHF 無線麥克風</td><td>TEV TR-102</td><td>~$5,000</td></tr>
+          <tr><td>HDMI 音訊分離器</td><td>蝦皮搜「HDMI audio extractor」</td><td>$300 ~ $800</td></tr>
+          <tr><td>線材</td><td>RCA 線 + 光纖線</td><td>$500 ~ $1,000</td></tr>
+          <tr style="background:#fff5f5; font-weight:700;"><td colspan="2">還需花費總計</td><td class="best">$13,800 ~ $21,800</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="why-box" style="margin-top:20px;">
+      <h4>&#128176; 省了多少？</h4>
+      <p>同樣效果全部買新的要 <strong>$60,000 ~ $80,000</strong> 以上。你已經省了一大半，只需再花 <strong>$14,000 ~ $22,000</strong> 就能完成整套系統！</p>
+    </div>
+  </section>
+
+  <!-- Section 12 -->
+  <section class="section" id="amp-recommend">
+    <h2 class="section-title"><span class="num">12</span> 擴大機推薦（如需更換）</h2>
+    <p style="margin-bottom:16px; color:#666;">如果你的 Yamaha 擴大機沒有 SUB OUT，可能需要換一台。以下是二手推薦：</p>
+    <div style="overflow-x:auto;">
+      <table class="data-table">
+        <thead><tr><th>型號</th><th>功率</th><th>原價</th><th>二手價</th><th>折數</th><th>SUB OUT</th><th>推薦度</th></tr></thead>
+        <tbody>
+          <tr class="highlight">
+            <td><strong>Yamaha A-S301</strong></td><td>60W</td><td>$16,900</td><td>$6,400~8,400</td>
+            <td><span class="discount">3.8~5折</span></td><td><span class="badge badge-green">有</span></td>
+            <td><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></td>
+          </tr>
+          <tr>
+            <td><strong>Onkyo TX-8220</strong></td><td>100W</td><td>~$12,000</td><td>$5,000~6,000</td>
+            <td><span class="discount">4~5折</span></td><td><span class="badge badge-green">有</span></td>
+            <td><span class="stars">&#9733;&#9733;&#9733;&#9733;</span></td>
+          </tr>
+          <tr>
+            <td><strong>Onkyo A-9110</strong></td><td>50W</td><td>~$12,000</td><td>$5,000~8,000</td>
+            <td><span class="discount">4~6.5折</span></td><td><span class="badge badge-green">有</span></td>
+            <td><span class="stars">&#9733;&#9733;&#9733;&#9733;</span></td>
+          </tr>
+          <tr>
+            <td><strong>SMSL SA300</strong></td><td>80W</td><td>~$5,500</td><td>~$3,900</td>
+            <td><span class="discount">7折</span></td><td><span class="badge badge-green">有</span></td>
+            <td><span class="stars">&#9733;&#9733;&#9733;</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip" style="background:#fff8e1; border-radius:8px; padding:14px 18px; border-left:4px solid var(--accent-yellow); margin-top:16px; color:#7d6608;">
+      <strong>首選：Yamaha A-S301</strong> — 有 SUB OUT、內建 DAC、60W 推 RP-600M 綽綽有餘。二手約 $6,400 起，CP 值最高。
+    </div>
+  </section>
+
+  <!-- Section 13 -->
+  <section class="section" id="mic">
+    <h2 class="section-title"><span class="num">13</span> 麥克風選購指南</h2>
+    <div class="why-box">
+      <h4>&#9888;&#65039; 為什麼唱歌不能用藍牙麥克風？</h4>
+      <div class="compare-grid">
+        <div class="compare-card compare-good">
+          <span class="label">&#9989; UHF 無線麥克風</span>
+          延遲 &lt; 5ms（幾乎零延遲）<br>唱歌嘴巴和聲音完全同步<br>專業 KTV 標準配備
+        </div>
+        <div class="compare-card compare-bad">
+          <span class="label">&#10060; 藍牙麥克風</span>
+          延遲 50~200ms（慢半拍）<br>嘴巴張開，聲音慢一步才出來<br>唱快歌會完全對不上
+        </div>
+      </div>
+    </div>
+    <div class="upgrade-card" style="margin-top:20px;">
+      <h4>&#127908; 推薦型號：TEV TR-102</h4>
+      <span class="price">約 NT$ 5,000</span>
+      <ul>
+        <li>UHF 無線，延遲極低</li>
+        <li>雙頻道（兩支麥克風，可以對唱！）</li>
+        <li>接收器有 6.3mm 輸出，直接插 KARASTAR</li>
+        <li>台灣品牌，維修方便</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section 14 -->
+  <section class="section" id="songlib">
+    <h2 class="section-title"><span class="num">14</span> 歌庫更新費用比較</h2>
+    <div style="overflow-x:auto;">
+      <table class="data-table">
+        <thead><tr><th>品牌</th><th>更新方式</th><th>費用</th><th>頻率</th></tr></thead>
+        <tbody>
+          <tr><td><strong>音圓</strong></td><td>雲端下載 + 光碟</td><td>每期約 $150~300</td><td>每月</td></tr>
+          <tr><td><strong>金嗓</strong></td><td>經銷商灌歌 / 連網下載</td><td>補灌 1~3 年約 $1,000~3,000</td><td>定期</td></tr>
+          <tr><td><strong>美華</strong></td><td>光碟灌歌</td><td>一年 12 集約 $1,200</td><td>每月</td></tr>
+          <tr><td><strong>到府灌歌</strong></td><td>師傅到家裡灌</td><td>車馬費另加 $200~500</td><td>依需求</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip" style="background:#e8f8f0; border-radius:8px; padding:14px 18px; border-left:4px solid var(--accent-green); margin-top:16px; color:#1a7a42;">
+      <strong>省錢提醒：</strong>買二手機時，先問賣家歌庫更新到什麼時候。如果最近才灌過歌，短期內不需要再花錢更新。
+    </div>
+  </section>
+
+  <!-- Section 15 -->
+  <section class="section" id="tuning">
+    <h2 class="section-title"><span class="num">15</span> KTV 爆炸感調校教學</h2>
+    <p style="margin-bottom:20px; color:#666;">KTV 包廂的震撼感 = 音壓 + 低頻 + 迴音 + 音量平衡。以下是具體數值建議：</p>
+
+    <div class="tuning-step">
+      <h4>&#128165; 第一步：重低音（R-10SWi）</h4>
+      <div class="setting"><span class="setting-name">VOLUME 音量</span><span class="setting-value">50% → 逐步加到 60~70%</span></div>
+      <div class="setting"><span class="setting-name">LOW PASS 分頻點</span><span class="setting-value">80 Hz</span></div>
+      <div class="setting"><span class="setting-name">PHASE 相位</span><span class="setting-value">0&#176;</span></div>
+      <p style="color:#888; font-size:15px; margin-top:10px;">覺得低音不夠 → 加 VOLUME；覺得低音太「轟」→ 降 VOLUME 或把重低音移離牆角</p>
+    </div>
+
+    <div class="tuning-step">
+      <h4>&#127897; 第二步：KARASTAR 迴音</h4>
+      <div class="setting"><span class="setting-name">混響模式</span><span class="setting-value">REVERB STAGE 類型</span></div>
+      <div class="setting"><span class="setting-name">迴音大小</span><span class="setting-value">40~60%</span></div>
+      <div class="setting"><span class="setting-name">升降 KEY</span><span class="setting-value">依歌手音域調整</span></div>
+      <p style="color:#888; font-size:15px; margin-top:10px;">迴音越大越有「KTV 感」，但太大聲音會糊。找到你覺得最好聽的平衡點。</p>
+    </div>
+
+    <div class="tuning-step">
+      <h4>&#127908; 第三步：音量平衡</h4>
+      <div class="setting"><span class="setting-name">麥克風 vs 伴奏</span><span class="setting-value">麥克風略大</span></div>
+      <div class="setting"><span class="setting-name">擴大機總音量</span><span class="setting-value">不超過 80%</span></div>
+      <div class="setting"><span class="setting-name">KARASTAR 麥克風音量</span><span class="setting-value">先 70%，再微調</span></div>
+      <p style="color:#888; font-size:15px; margin-top:10px;">先調 KARASTAR 的麥克風音量，再調擴大機的總音量。兩個要搭配調整。</p>
+    </div>
+  </section>
+
+  <!-- Section 16 -->
+  <section class="section" id="room">
+    <h2 class="section-title"><span class="num">16</span> 房間聲學小技巧（免費改善）</h2>
+
+    <div class="room-tip">
+      <span class="room-icon">&#129526;</span>
+      <div>
+        <h4>側牆掛厚窗簾</h4>
+        <p>減少中高頻的刺耳反射，聲音更柔和。尤其是喇叭旁邊的牆壁，掛窗簾效果最明顯。</p>
+      </div>
+    </div>
+
+    <div class="room-tip">
+      <span class="room-icon">&#128218;</span>
+      <div>
+        <h4>書櫃是天然擴散器</h4>
+        <p>書本大小不一，自然形成聲音擴散面。放在喇叭對面的牆上效果很好。</p>
+      </div>
+    </div>
+
+    <div class="room-tip">
+      <span class="room-icon">&#128715;</span>
+      <div>
+        <h4>沙發和地毯吸收低頻</h4>
+        <p>軟質家具會吸收部分低頻，讓重低音不會太「轟」。客廳通常已經有這些了。</p>
+      </div>
+    </div>
+
+    <div class="room-tip">
+      <span class="room-icon">&#128266;</span>
+      <div>
+        <h4>喇叭擺放位置</h4>
+        <p>左右喇叭間距約為牆寬的 60%。喇叭高度與耳朵齊平最好（書架喇叭可放在喇叭架上）。</p>
+      </div>
+    </div>
+
+    <div class="room-tip">
+      <span class="room-icon">&#128165;</span>
+      <div>
+        <h4>重低音放牆角最強</h4>
+        <p>牆角能增強低頻約 6dB（聽起來響一倍）。如果太「轟」就往前移，找到平衡點。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 17 -->
+  <section class="section" id="dual-mode">
+    <h2 class="section-title"><span class="num">17</span> KARASTAR + 點歌機雙模式</h2>
+    <p style="margin-bottom:20px; color:#666;">KARASTAR 和點歌機<strong>不是二選一</strong>，兩個一起用效果最好！</p>
+
+    <div class="mode-card">
+      <span class="mode-tag" style="background:#e8f0fe; color:var(--mid-blue);">模式一</span>
+      <h4>&#127916; 點歌機模式（唱台語老歌、經典國語歌）</h4>
+      <p style="margin-bottom:12px;">點歌機負責選歌播歌，KARASTAR 負責混音和迴音效果。</p>
+      <div class="mini-diagram">
+        點歌機 &#8594; HDMI &#8594; 電視（歌詞）<br>
+        點歌機 &#8594; 光纖 &#8594; KARASTAR（混音+迴音）&#8594; 擴大機 &#8594; 喇叭
+      </div>
+      <ul style="margin-top:12px; padding-left:20px; font-size:16px;">
+        <li>專業伴奏帶，零人聲殘留</li>
+        <li>歌詞精準同步到每個字</li>
+        <li>遙控器點歌，長輩操作簡單</li>
+        <li>KARASTAR 的 AVC 人聲消除設為<strong>關閉</strong></li>
+      </ul>
+    </div>
+
+    <div class="mode-card">
+      <span class="mode-tag" style="background:#fff0ed; color:var(--accent-red);">模式二</span>
+      <h4>&#128250; YouTube 模式（唱最新歌、冷門歌、外語歌）</h4>
+      <p style="margin-bottom:12px;">電視播 YouTube，KARASTAR 的 AVC 自動消除原唱人聲。</p>
+      <div class="mini-diagram">
+        電視/電視盒 YouTube &#8594; 光纖 &#8594; KARASTAR（AVC 去人聲+混音）&#8594; 擴大機 &#8594; 喇叭
+      </div>
+      <ul style="margin-top:12px; padding-left:20px; font-size:16px;">
+        <li>歌曲數量近乎無限</li>
+        <li>AI 去人聲，可能有 10~15% 殘留</li>
+        <li>適合點歌機歌庫沒有的歌</li>
+        <li>KARASTAR 的 AVC 人聲消除設為<strong>開啟</strong></li>
+      </ul>
+    </div>
+
+    <div class="why-box">
+      <h4>&#128161; 切換方式很簡單</h4>
+      <p>用電視遙控器的「<strong>輸入/Source</strong>」按鈕切換訊號源就好了！<br>想唱點歌機的歌 &#8594; 切到 HDMI 1（點歌機）<br>想唱 YouTube 的歌 &#8594; 切到 HDMI 2（電視盒）<br>等於擁有<strong>無限歌庫</strong>！</p>
+    </div>
+  </section>
+
+  <!-- Section 18 -->
+  <section class="section" id="links">
+    <h2 class="section-title"><span class="num">18</span> 搜尋連結彙整（一鍵直達）</h2>
+
+    <h3 style="margin-bottom:14px; color:var(--navy);">&#127916; 二手點歌機</h3>
+    <div class="link-grid">
+      <a class="link-card" href="https://biggo.com.tw/s/%E9%87%91%E5%97%93+%E4%BC%B4%E5%94%B1%E6%A9%9F/" target="_blank" rel="noopener">
+        <h4>BigGo - 金嗓伴唱機</h4>
+        <p>跨平台比價，找最低價</p>
+        <span class="url">biggo.com.tw</span>
+      </a>
+      <a class="link-card" href="https://biggo.com.tw/s/%E9%9F%B3%E5%9C%93+%E4%BC%B4%E5%94%B1%E6%A9%9F/" target="_blank" rel="noopener">
+        <h4>BigGo - 音圓伴唱機</h4>
+        <p>跨平台比價，找最低價</p>
+        <span class="url">biggo.com.tw</span>
+      </a>
+      <a class="link-card" href="https://shopee.tw/search?keyword=%E4%BA%8C%E6%89%8B+%E4%BC%B4%E5%94%B1%E6%A9%9F" target="_blank" rel="noopener">
+        <h4>蝦皮 - 二手伴唱機</h4>
+        <p>個人賣家出清，價格低</p>
+        <span class="url">shopee.tw</span>
+      </a>
+      <a class="link-card" href="https://tw.bid.yahoo.com/search/auction/product?p=%E4%BA%8C%E6%89%8B%E4%BC%B4%E5%94%B1%E6%A9%9F" target="_blank" rel="noopener">
+        <h4>Yahoo 拍賣 - 二手伴唱機</h4>
+        <p>拍賣競標，可能撿便宜</p>
+        <span class="url">tw.bid.yahoo.com</span>
+      </a>
+    </div>
+
+    <h3 style="margin-top:28px; margin-bottom:14px; color:var(--navy);">&#127932; 二手擴大機</h3>
+    <div class="link-grid">
+      <a class="link-card" href="https://biggo.com.tw/s/yamaha+a-s301/" target="_blank" rel="noopener">
+        <h4>BigGo - Yamaha A-S301</h4>
+        <p>首推！有 SUB OUT</p>
+        <span class="url">biggo.com.tw</span>
+      </a>
+      <a class="link-card" href="https://biggo.com.tw/s/%E7%B6%9C%E5%90%88%E6%93%B4%E5%A4%A7%E6%A9%9F+%E4%BA%8C%E6%89%8B/" target="_blank" rel="noopener">
+        <h4>BigGo - 二手綜合擴大機</h4>
+        <p>各品牌比價</p>
+        <span class="url">biggo.com.tw</span>
+      </a>
+      <a class="link-card" href="https://shopee.tw/search?keyword=%E4%BA%8C%E6%89%8B+%E6%93%B4%E5%A4%A7%E6%A9%9F+yamaha" target="_blank" rel="noopener">
+        <h4>蝦皮 - 二手 Yamaha 擴大機</h4>
+        <p>直接搜尋</p>
+        <span class="url">shopee.tw</span>
+      </a>
+    </div>
+
+    <h3 style="margin-top:28px; margin-bottom:14px; color:var(--navy);">&#127908; 麥克風</h3>
+    <div class="link-grid">
+      <a class="link-card" href="https://biggo.com.tw/s/TEV+TR-102/" target="_blank" rel="noopener">
+        <h4>BigGo - TEV TR-102</h4>
+        <p>推薦的 UHF 無線麥克風</p>
+        <span class="url">biggo.com.tw</span>
+      </a>
+      <a class="link-card" href="https://shopee.tw/search?keyword=UHF+%E7%84%A1%E7%B7%9A%E9%BA%A5%E5%85%8B%E9%A2%A8+%E5%8D%A1%E6%8B%89OK" target="_blank" rel="noopener">
+        <h4>蝦皮 - UHF 無線麥克風</h4>
+        <p>各品牌卡拉OK用</p>
+        <span class="url">shopee.tw</span>
+      </a>
+    </div>
+
+    <h3 style="margin-top:28px; margin-bottom:14px; color:var(--navy);">&#128268; HDMI 音訊分離器</h3>
+    <div class="link-grid">
+      <a class="link-card" href="https://shopee.tw/search?keyword=HDMI+%E9%9F%B3%E8%A8%8A%E5%88%86%E9%9B%A2%E5%99%A8+%E5%85%89%E7%BA%96" target="_blank" rel="noopener">
+        <h4>蝦皮 - HDMI 音訊分離器</h4>
+        <p>$300~800 搞定</p>
+        <span class="url">shopee.tw</span>
+      </a>
+    </div>
+
+    <h3 style="margin-top:28px; margin-bottom:14px; color:var(--navy);">&#128483;&#65039; 社團和討論區</h3>
+    <div class="link-grid">
+      <a class="link-card" href="https://www.facebook.com/groups/search/groups/?q=%E4%BA%8C%E6%89%8B%E9%9F%B3%E9%9F%BF" target="_blank" rel="noopener">
+        <h4>Facebook - 二手音響社團</h4>
+        <p>個人出清，價格最殺</p>
+        <span class="url">facebook.com</span>
+      </a>
+      <a class="link-card" href="https://www.mobile01.com/category.php?id=35" target="_blank" rel="noopener">
+        <h4>Mobile01 - 影音討論區</h4>
+        <p>專業玩家經驗分享</p>
+        <span class="url">mobile01.com</span>
+      </a>
     </div>
   </section>
 
